@@ -1,0 +1,109 @@
+body {
+	background: white;
+	color: black;
+	font-family: monospace;
+	/*margin: 100px 400px;*/
+	margin: 50px 200px;
+	
+}
+
+div {
+	border: 2px solid black;
+	border-radius: 12px; /*20px*/
+	background-color: #F5F5F5;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 25px;
+	width: 70%;
+}
+
+
+
+h1 {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+
+#myNewItem {
+	margin: 20px 20px 20px 40px;
+	width: 60%;
+	border: 2px solid #4682B4;
+}
+
+#myNewItem:focus {
+	border: 4px double #4682B4;
+}
+
+
+
+.close:hover {
+	background-color: #4682B4;
+}
+
+#del-button {
+	border-radius: 8px;
+	font-size: 16px;
+	padding: 3px 25px;
+	background-color: #4682B4;
+	margin-top: 15px;
+	color: white;
+	position: sticky;
+}
+
+#add-button {
+	border-radius: 8px;
+	font-size: 16px;
+	padding: 3px 25px;
+	background-color: #4682B4;
+	color: white;
+}
+
+button:hover {
+	background-color: #87CEFA;
+	border: 2px solid #4682B4;
+}
+
+
+
+/*lisätyn esineen teksti
+	color: #4682B4
+	
+	
+	kun hiiri on listan esineen päällä tausta väri muuttuu: background-color: */
+	
+li:hover {
+  background-color: #D3D3D3;
+  color: #4682B4;
+}
+	
+li {
+	 list-style-type: none;
+	 margin: 5px;
+	 /*color: #4682B4;*/
+	 
+}
+
+#errormessage {
+	/*background-color tai text-color muuttuu*/
+}
+
+@media screen and (max-width: 750px) {  
+	
+	.div {
+		width: 100%;
+		}
+	body {	
+	background-color: green;
+	}
+	
+	.button {
+		text-align: center;
+		padding: 70px 0;
+		margin: auto;
+	}
+	
+	#myNewItem {
+		width: 70%;
+	}
+} 

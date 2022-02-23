@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Packing list</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes"> 
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+		<link rel="stylesheet" href="jsproject1style.css">
+	</head>
+	
+	<body>
+		<h1>Create your own packing list!</h1>
+		<!--<p>This is a delete button &#10006</p>-->
+		<div>
+			<!--<I first had the text input and submit input inside <form> tags but it didn't work. I switched the submit input button as a normal button.-->
+				  <input type="text" id="myNewItem" placeholder="Write to add an item...">
+				 <button type="submit" id="add-button" onclick="newItem()" value="Add">Add</button>
+				  <br>
+		
+			<ul id="myList">
+				<li>Phone</li>
+				<li>Passport</li>
+				<li>Toothbrush</li>
+				<li><input type="checkbox">Pay bill!</li>
+			</ul>
+			<button onclick="deleteAll()" id="del-button">Delete all items</button>
+		</div>
+		
+	<!--	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>-->
+		<script>
+			
+			function newItem() {
+			  var li = document.createElement("li");
+			  var inputValue = document.getElementById("myNewItem").value;
+			  var t = document.createTextNode(inputValue);
+			  li.appendChild(t);
+			  if (inputValue === "" || inputValue.length < 3) {
+				document.getElementById("errormessage").innerHTML = "Please, write something!";
+			  } else {
+				document.getElementById("myList").appendChild(li);
+			  }
+			  document.getElementById("myNewItem").value = "";
+
+				//luo uuden listaesineen ja x
+			  var span = document.createElement("SPAN");
+			  var txt = document.createTextNode("\u00D7");
+			  span.className = "close";
+			  span.appendChild(txt);
+			  li.appendChild(span);
+
+			  for (i = 0; i < close.length; i++) {
+				close[i].onclick = function() {
+				  var div = this.parentElement;
+				  div.style.display = "none";
+				}
+			  }
+			}
+			//Create a close button to every list item
+			var myList2 = document.getElementsByTagName("li");
+			var i;
+			for (i = 0; i < myList2.length; i++) {
+			  var span = document.createElement("span");
+			  var txt = document.createTextNode("\u00D7");
+			  span.className = "close";
+			  span.appendChild(txt);
+			  myList2[i].appendChild(span);
+			}
+			
+			//Press "X" to delete the item from the list
+			var close = document.getElementsByClassName("close");
+			var i;
+			for (i = 0; i < close.length; i++) {
+			  close[i].onclick = function() {
+				var div = this.parentElement;
+				div.style.display = "none";
+			  }
+			}
+			
+			
+			
+			
+			//lista tarvittavista koodeista ja funktioista
+			/*
+			- kun esineen päälle menee hiirellä, poistamismahdollisuus tulee esiin?
+			- kun ollaan poistamisnappi X:n päälllä, sen taustaväri muuttuu
+			- jokaisen esineen ilmestyessä listaan sen vas. puolella on myös checkbox, jossa hiiri onhover sen reunuksiin tulee toinen väri ja kun klikataan niin checkbox menee on-asentoon
+			- delete all items -nappi pitää myös saada oikeaan alakulmaan
+			- responsiivisuus kuntoon!
+			*/
+				
+				
+				
+				//This function is executed if you press "Delete all items" button. The function asks are you sure about that and if pressed "OK", it calls another function which deletes all the list items.
+				function deleteAll() {
+					if (confirm("Are you sure you want to delete all items?")) {
+						return deleteItemsAll();
+					} 
+				}
+				
+				function deleteItemsAll() {
+					var list = document.getElementById("myList");
+					while (list.hasChildNodes()) {
+						list.removeChild(list.firstChild);
+					 }
+				}
+				
+		</script>
+	</body>
+</html>
