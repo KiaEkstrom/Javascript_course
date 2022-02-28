@@ -1,2 +1,1 @@
-This is first javascript repository
-Now this is visible on vsc
+This is the repository for my Javascript course projects.
