@@ -1,4 +1,6 @@
-/*var list = document.querySelector("ul");
+/* Code for getting a checked mark next to each list item, but I couldn't make it to work.
+
+var list = document.querySelector("ul");
 list.addEventListener("click", function(ev) {
 	if (ev.target.tagName == "li") {
 		ev.target.classList.toggle("checked");
