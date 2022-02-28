@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Packing list</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link rel="stylesheet" href="jsproject1style.css">
+	</head>
+	
+	<body>
+		<h1>Create your own packing list!</h1>
+		<div>
+			<!-- I first had the text input and submit input inside <form> tags but it didn't work. I switched the submit input button as a normal button.-->
+				<input type="text" id="myNewItem" placeholder="Write to add an item...">
+			<!-- First I had a span tag here which would display an error if the input wasn't valid. But I couldn't get the span text away, so the error comes in the form of an alert.-->
+				<button type="submit" id="add-button" onclick="newItem()" value="Add">Add</button>
+				<br>
+		
+			<ul id="myList">
+				<li>Phone</li>
+				<li class="checked">Passport</li>
+				<li>Toothbrush</li>
+				<li><input type="checkbox">Pay bill!</li>
+			</ul>
+			<button onclick="deleteAll()" id="del-button">Delete all items</button>
+		</div>
+		
+	<script src="project1.js"></script>
+		
+	</body>
+</html>
