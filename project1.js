@@ -1,11 +1,3 @@
-/* Code for getting a checked mark next to each list item, but I couldn't make it to work.
-
-var list = document.querySelector("ul");
-list.addEventListener("click", function(ev) {
-	if (ev.target.tagName == "li") {
-		ev.target.classList.toggle("checked");
-	}
-}, false);*/
 			
 //This function creates a new item with a close button X to the list 
 			
@@ -72,6 +64,3 @@ function deleteItemsAll() {
 	}
 }
 
-sessionStorage.setItem("li", "");
-
-sessionStorage.getItem("li", "");
