@@ -14,7 +14,7 @@ body {
 
 div {
 	border: 2px solid black;
-	border-radius: 12px; /*20px*/
+	border-radius: 12px; 
 	background-color: #F5F5F5;
 	margin-left: auto;
 	margin-right: auto;
@@ -119,12 +119,6 @@ button:hover {
 		margin-left: auto;
 		margin-right: auto;
 	}
-	
-	/*button {
-		text-align: center;
-		padding: 70px 0;
-		margin: auto;
-	}*/
 	
 	#myNewItem {
 		width: 70%;
