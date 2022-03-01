@@ -71,3 +71,7 @@ function deleteItemsAll() {
 		list.removeChild(list.firstChild);
 	}
 }
+
+sessionStorage.setItem("li", "");
+
+sessionStorage.getItem("li", "");
